@@ -1,3 +1,5 @@
+<?php include "header.php" ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,3 +10,12 @@
     <script src="app.js" defer></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
+
+<body>
+
+<h1 class="welcome">La librairie de Gabriel et Benjamin ! &#x261D;&#x1F913;&#x1F4D6;</h1>
+
+
+
+</body>
+</html>

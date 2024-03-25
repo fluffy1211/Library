@@ -1,0 +1,102 @@
+.success {
+    margin-top: 10rem;
+    text-align: center;
+}
+
+.welcome {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+
+
+.error {
+    color: red;
+    text-align: center;
+}
+
+/* NAVBAR */
+
+nav {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.44);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.4px);
+    -webkit-backdrop-filter: blur(10.4px);
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-right: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+
+li {
+    list-style-type: none;
+}
+
+/* SIGNUP */
+
+.signup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input {
+    margin: 1rem;
+    padding: 0.2rem;
+    width: 10rem;
+}
+
+form button {
+    margin: 1rem;
+    padding: 0.2rem;
+    width: 10rem;
+}
+
+/* LOGIN */
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+/* SEARCH BAR */
+
+
+
+.search input {
+    padding: 0.2rem;
+    width: 10rem;
+    border-radius: 10px;
+}
+
+nav .search {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
