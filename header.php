@@ -17,19 +17,20 @@ session_start();
             <ul>
 
             <?php if (isset($_SESSION['user']) && $_SESSION['user']['logged']) : ?>
+
                 <li><a href="index.view.php">Home</a></li>
                 <li><a href="logout.view.php">Logout</a></li>
-                <div class="search">
+                <!-- <div class="search">
                 <input type="text" placeholder="tu veux lire quoi...?">
-                </div>
+                </div> -->
 
             <?php else: ?>
-                <li><a href="index.view.php">Home</a></li>
+                <li><a  href="index.view.php">Home</a></li>
                 <li><a href="login.view.php">Login</a></li>
                 <li><a href="signup.view.php">Signup</a></li>
-                <div class="search">
+                <!-- <div class="search">
                 <input type="text" placeholder="tu veux lire quoi...?">
-                </div>
+                </div> -->
                 
             <?php endif; ?>
             </ul>

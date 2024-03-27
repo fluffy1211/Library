@@ -15,7 +15,10 @@
 
 <h1 class="welcome">La librairie de Gabriel et Benjamin ! &#x261D;&#x1F913;&#x1F4D6;</h1>
 
-
-
+<div class="center">
+    <input class="search" type="text" placeholder="Chercher un livre">
+    <button class="go">Go</button>
+</div>
+<div class="books"></div>
 </body>
 </html>
