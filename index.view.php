@@ -17,7 +17,18 @@
 
 <div class="center">
     <input class="search" type="text" placeholder="Chercher un livre">
+    <select name="genre" class="genre">
+        <option value="all">Genre</option>
+        <option value="geography">Géographie</option>
+        <option value="non-fiction">Non-Fiction</option>
+        <option value="mystery">Mystère</option>
+        <option value="thriller">Thriller</option>
+        <option value="romance">Romance</option>
+        <option value="horror">Horreur</option>
+        <option value="fantasy">Fantaisie</option>
+    </select>
     <button class="go">Go</button>
+
 </div>
 <div class="books"></div>
 </body>

@@ -72,11 +72,23 @@ input {
     text-align: center;
 }
 
-button {
-    width: 50px;
+.go {
+    width: 75px;
     height: 38px;
     border-radius: 20px;
     cursor: pointer;
+}
+
+option {
+    text-align: center;
+}
+
+select {
+    width: 100px;
+    height: 38px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-right: 20px;
 }
 
 
@@ -150,6 +162,11 @@ form button {
 
 }
 
+/* FAV BUTTON */
 
-
-
+.add-to-favorite {
+    width: 75px;
+    height: 38px;
+    border-radius: 20px;
+    cursor: pointer;
+}
