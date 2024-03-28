@@ -70,6 +70,7 @@ input {
     height: 30px;
     border-radius: 20px;
     text-align: center;
+    cursor: pointer;
 }
 
 .go {
@@ -160,13 +161,4 @@ form button {
     font-weight: bold;
     font-size: 0.9rem;
 
-}
-
-/* FAV BUTTON */
-
-.add-to-favorite {
-    width: 75px;
-    height: 38px;
-    border-radius: 20px;
-    cursor: pointer;
 }

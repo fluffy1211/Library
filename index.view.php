@@ -7,18 +7,18 @@ include "index.php";
 include "dbconfig.php";
 include "functions.php";
 
-if(isset($_POST['addfavorite'])) {
-    $book_id = $_POST['addfavorite'];
-    $user_id = $_SESSION['user']['id'];
-    $title = $_POST['title'];
-    $author = $_POST['author'];
-    $poster = $_POST['poster'];
+// if(isset($_POST['addfavorite'])) {
+//     $book_id = $_POST['addfavorite'];
+//     $user_id = $_SESSION['user']['id'];
+//     $title = $_POST['title'];
+//     $author = $_POST['author'];
+//     $poster = $_POST['poster'];
 
-    $sql = "INSERT INTO books(id_user, id_book, title, author, poster) VALUES(?, ?, ?, ?, ?)";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([$user_id, $book_id, $title, $author, $poster]);
+//     $sql = "INSERT INTO books(id_user, id_book, title, author, poster) VALUES(?, ?, ?, ?, ?)";
+//     $stmt = $pdo->prepare($sql);
+//     $stmt->execute([$user_id, $book_id, $title, $author, $poster]);
 
-}
+// }
 
 ?>
 
@@ -33,9 +33,14 @@ if(isset($_POST['addfavorite'])) {
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
+
 <body>
 
-<h1 class="welcome">La librairie de Gabriel et Benjamin ! &#x261D;&#x1F913;&#x1F4D6;</h1>
+<?php if(isset($_SESSION['user'])): ?>
+    <h1 class="welcome">La librairie de <?php echo $_SESSION['user']['username']; ?> !&#x261D;&#x1F913;&#x1F4D6;</h1> 
+<?php else: ?>
+    <h1 class="welcome">Bienvenue, connectez vous. &#x1F4D6;</h1>
+<?php endif; ?>
 
 <div class="center">
     <input class="search" type="text" placeholder="Chercher un livre">
