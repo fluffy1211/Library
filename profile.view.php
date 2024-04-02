@@ -23,7 +23,7 @@ if(isset($_SESSION['user'])): ?>
 
 <?php
 
-if ($_SERVER['REQUEST_METHOD'] === "POST") {
+if ($_SERVER['REQUEST_METHOD'] === "POST" ) {
     $avatar = $_FILES['avatar'];
     $avatar_name = $avatar['name'];
     $avatar_tmp_name = $avatar['tmp_name'];
@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
                     $_SESSION['user']['avatar'] = $avatar_destination;
 
                     // Display the uploaded image
-                    echo '<img class="avatar" src="' . $avatar_destination . '" alt="Avatar">';
+                    echo '<img class="avatar" src="' . $avatar_destination . '" >';
                 } else {
                     echo "Failed to move the uploaded file!";
                 }
@@ -62,13 +62,14 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     } else {
         echo "You cannot upload files of this type!";
     }
+} elseif (isset($_SESSION['user']['avatar'])) {
+    $avatar_location = $_SESSION['user']['avatar'];
+    echo '<img class="avatar" src="' . $avatar_location . '" >';
 }
 
-if (isset($_SESSION['user']['avatar'])) {
-    echo '<img class="avatar" src="' . $_SESSION['user']['avatar'] . ' </img>';
-}
 
 
 ?>
+
 
 
