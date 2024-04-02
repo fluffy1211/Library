@@ -208,4 +208,8 @@ input[type='file'] {
     color: rgba(0, 0, 0, 0)
   }
 
-
+.inline {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
