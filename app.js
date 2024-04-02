@@ -2,8 +2,8 @@ const search = document.querySelector('.search');
 const go = document.querySelector('.go');
 const books = document.querySelector('.books');
 const genre = document.querySelector('.genre');
-const add = document.querySelector('.add-to-favorite');
 const favoris = document.querySelector('.favoris');
+
 
 go.addEventListener('click', async (event) => {
     event.preventDefault();
@@ -24,12 +24,15 @@ go.addEventListener('click', async (event) => {
                 <p class="author">Auteur : ${authors}</p> 
                 <p class="title">${truncatedTitle}</p>
                 <form action="" method="post">
-                <input class=addfavorite" type="button" name=addfavorite value="Add to Favorite" onclick=addToFavorites('${title}', '${authors}', '${imageLinks}')">
+                <button class=addfavorite" type="button" name=addfavorite onclick="getButtonData()">Ajoutez aux favoris</button>
                 </form>
             `;
+
             const bookElement = document.createElement('div');
             bookElement.innerHTML = html;
             books.appendChild(bookElement);
+
+            
         });
     } catch (error) {
         console.error(error);
@@ -37,18 +40,18 @@ go.addEventListener('click', async (event) => {
 });
 
 
-function addToFavorites() {
-    document.querySelector('.favoris').innerHTML = '';
-    const html = `
-        <img class="poster" src="${imageLinks.thumbnail}" alt="poster">
-        <p class="author">Auteur : ${authors}</p> 
-        <p class="title">${title}</p>
-    `;
-    const bookElement = document.createElement('div');
-    bookElement.innerHTML = html;
-    favoris.appendChild(bookElement);
-    console.log(title, authors, imageLinks);
+function getButtonData() {
+    try {
+        const response = axios.get(`https://www.googleapis.com/books/v1/volumes/${bookId}`);
+        const bookId = response.data.items.id;
+        console.log(bookId);
+    } catch (error) {
+        console.error(error);
+    }
 }
+
+
+
 
 // go.addEventListener('click', async () => {
 //     const bookgenre = genre.value;

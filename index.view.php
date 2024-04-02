@@ -7,18 +7,6 @@ include "index.php";
 include "dbconfig.php";
 include "functions.php";
 
-// if(isset($_POST['addfavorite'])) {
-//     $book_id = $_POST['addfavorite'];
-//     $user_id = $_SESSION['user']['id'];
-//     $title = $_POST['title'];
-//     $author = $_POST['author'];
-//     $poster = $_POST['poster'];
-
-//     $sql = "INSERT INTO books(id_user, id_book, title, author, poster) VALUES(?, ?, ?, ?, ?)";
-//     $stmt = $pdo->prepare($sql);
-//     $stmt->execute([$user_id, $book_id, $title, $author, $poster]);
-
-// }
 
 ?>
 

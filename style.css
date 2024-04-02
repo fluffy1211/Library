@@ -162,3 +162,41 @@ form button {
     font-size: 0.9rem;
 
 }
+ 
+
+/* PROFILE  */
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.chose {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: larger;
+}
+
+.avatar {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    margin-top: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.file {
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: 41rem;
+}
+
+input[type='file'] {
+    color: rgba(0, 0, 0, 0)
+  }
