@@ -20,7 +20,7 @@ session_start();
 
                 <li><a href="index.view.php">Home</a></li>
                 <li><a href="favoris.view.php">Favoris</a></li>
-                <li><a href="profile.view.php">Profile</a></li>
+                <li><a href="profile.view.php">Profil</a></li>
                 <li><a href="logout.view.php">Logout</a></li>
                 <!-- <div class="search">
                 <input type="text" placeholder="tu veux lire quoi...?">

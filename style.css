@@ -163,6 +163,14 @@ form button {
 
 }
  
+.addfavorite  {
+    cursor: pointer;
+    margin-top: 0.8rem;
+    padding: 0.2rem;
+    width: 10rem;
+    border-radius: 20px;
+
+}
 
 /* PROFILE  */
 
@@ -184,7 +192,6 @@ form button {
     width: 10rem;
     height: 10rem;
     border-radius: 50%;
-    margin-top: 2rem;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -200,3 +207,5 @@ form button {
 input[type='file'] {
     color: rgba(0, 0, 0, 0)
   }
+
+

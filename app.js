@@ -24,7 +24,7 @@ go.addEventListener('click', async (event) => {
                 <p class="author">Auteur : ${authors}</p> 
                 <p class="title">${truncatedTitle}</p>
                 <form action="" method="post">
-                <button class=addfavorite" type="button" name=addfavorite onclick="getButtonData()">Ajoutez aux favoris</button>
+                <button class="addfavorite" type="button" name=addfavorite onclick="getButtonData()">Ajoutez aux favoris</button>
                 </form>
             `;
 

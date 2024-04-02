@@ -5,21 +5,11 @@ include "header.php";
 include "index.php";
 include "dbconfig.php";
 
-?>
-
-<?php 
+ 
 
 if(isset($_SESSION['user'])): ?>
-<h1 class="profile">Votre pseudo est <?php echo $_SESSION['user']['username'];?></h1>
+<h1 class="profile">Profil de <?php echo $_SESSION['user']['username'];?> ! &#x1F44B;</h1>
 <?php endif; ?>
-
-    
-<p class="chose">Choisissez une photo de profil</p>
-
-<form method="post" enctype="multipart/form-data">
-    <input type="file" class="file" name="avatar" accept="image/png, image/jpeg">
-    <input type="submit" value="Submit">
-</form>
 
 <?php
 
@@ -67,9 +57,18 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" ) {
     echo '<img class="avatar" src="' . $avatar_location . '" >';
 }
 
-
-
 ?>
+    
+<p class="chose">Choisissez une photo de profil</p>
+
+<form method="post" enctype="multipart/form-data">
+    <input type="file" class="file" name="avatar" accept="image/png, image/jpeg">
+    <input type="submit" value="Submit">
+</form>
+
+<?php
+
+
 
 
 
