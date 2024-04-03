@@ -19,11 +19,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if($passValid) {
             $hash = password_hash($password, PASSWORD_DEFAULT);
         } else {
-            $error = 'Password must be at least 8 characters long and contain at least one digit';
+            $error = 'Le mot de passe doit comporter au moins 8 caractères et au moins un chiffre.';
         }
 
         if (checkExists('username', $username, $pdo)) {
-            $error = 'User already exists';
+            $error = "L'utilisateur existe déjà";
         } else {
             if (isset($hash)) {
                 $sql = "INSERT INTO users(username, password) VALUES(?, ?)";
@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
     } else {
-        $error = 'Please fill in all fields';
+        $error = 'Merci de remplir tous les champs';
     }
 }
 
@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <form method="post">
         <input type="text" name="username" placeholder="Username">
         <input type="password" name="password" placeholder="Password">
-        <button type="submit">Signup</button>
+        <button class="signup"type="submit">Signup</button>
     </form>
 
     <?php if (isset($error)) : ?>

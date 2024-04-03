@@ -13,6 +13,7 @@ include "index.php";
 <body>
 
 <h1 class="success">Signup Réussi !</h1>
-    
+
+<a href="login.view.php"><p class="redirect">Redirection sur la page de login</p></a>
 </body>
 </html>
