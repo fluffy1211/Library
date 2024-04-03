@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
             if (in_array($avatar_actual_ext, $allowed)) {
                 if ($avatar_error === 0) {
                     if ($avatar_size < 1000000) {
-                        $avatar_name_new = uniqid('', true) . "." . $avatar_actual_ext;
+                        $avatar_name_new = $_SESSION['user']['id'] . "." . $avatar_actual_ext; // Use user ID as the file name
                         $avatar_destination = 'uploads/' . $avatar_name_new;
 
                         if (move_uploaded_file($avatar_tmp_name, $avatar_destination)) {
@@ -58,9 +58,6 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
                             $stmt->execute([$avatar_destination, $_SESSION['user']['id']]);
 
                             $_SESSION['user']['avatar'] = $avatar_destination;
-
-                            // Display the uploaded image
-                            echo '<img class="avatar" src="' . $avatar_destination . '" >';
                         } else {
                             echo "Failed to move the uploaded file!";
                         }
@@ -73,15 +70,17 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
             } else {
                 echo "You cannot upload files of this type!";
             }
-        } else {
-            // No new image uploaded, display the previously selected image
-            $avatar_location = $_SESSION['user']['avatar'];
-            echo '<img class="avatar" src="' . $avatar_location . '" >';
         }
-    } elseif (isset($_SESSION['user']['avatar'])) {
+    }
+
+    // Display the image
+    if (isset($_SESSION['user']['avatar'])) {
         $avatar_location = $_SESSION['user']['avatar'];
         echo '<img class="avatar" src="' . $avatar_location . '" >';
     }
+} elseif (isset($_SESSION['user']['avatar'])) {
+    $avatar_location = $_SESSION['user']['avatar'];
+    echo '<img class="avatar" src="' . $avatar_location . '" >';
 }
 ?>
 

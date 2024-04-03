@@ -6,6 +6,7 @@ body {
 
 .success {
     margin-top: 10rem;
+    font-size: 3rem;
     text-align: center;
 }
 
@@ -97,10 +98,11 @@ select {
 /* SIGNUP */
 
 .signup {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10rem;
+    cursor: pointer;
+    margin-top: 0.8rem;
+    padding: 0.2rem;
+    width: 10rem;
+    border-radius: 20px;
 }
 
 form {
@@ -125,13 +127,20 @@ form button {
     width: 10rem;
 }
 
-/* LOGIN */
-
-.login {
+.redirect {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10rem;
+}
+
+/* LOGIN */
+
+.login {
+    cursor: pointer;
+    margin-top: 0.8rem;
+    padding: 0.2rem;
+    width: 10rem;
+    border-radius: 20px;
 }
 
 /* BOOKS */
@@ -155,6 +164,8 @@ form button {
     padding-left: 4rem;
     padding-right: 4rem;
 }
+
+
 
 .title {
     margin-top: 1rem;
@@ -212,4 +223,38 @@ input[type='file'] {
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+/* FAVORITES */
+
+.booksfav {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 4.2rem;
+    text-align: center;
+    padding-left: 7.1rem;
+    padding-right: 4rem;
+    display: inline-block;
+}
+
+.title {
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.author {
+    font-size: 0.8rem;
+}
+
+.booksfav img {
+    width: 10rem;
+    height: 15rem;
+}
+
+a {
+    text-decoration: none;
+    color: red;
+
+
 }
