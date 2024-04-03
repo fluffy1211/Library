@@ -83,11 +83,5 @@ go.addEventListener('click', async () => {
 //     } catch (error) {
 //         console.error(error);
 //     }
-// }); // Add closing parenthesis here
-
-// test
-
-
-
-
-
+// }
+// );
