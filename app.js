@@ -47,6 +47,7 @@ go.addEventListener('click', async () => {
 });
 
 
+
 // go.addEventListener('click', async () => {
 //     const bookgenre = genre.value;
 //     try {
@@ -83,6 +84,8 @@ go.addEventListener('click', async () => {
 //         console.error(error);
 //     }
 // }); // Add closing parenthesis here
+
+// test
 
 
 
